@@ -5,9 +5,6 @@ const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
-server.use((req, res, next) => {
-  setTimeout(next, 500);
-});
 server.use(router);
 
 const app = express();
